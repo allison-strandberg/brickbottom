@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
+import { AppProps } from 'next/app';
 import '@styles/globals.css';
 
-function Application({ Component, pageProps }) {
+function Application({ Component, pageProps }: AppProps) {
   // eslint-disable-next-line react/jsx-props-no-spreading
   return <Component {...pageProps} />;
 }
