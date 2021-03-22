@@ -11,11 +11,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="Demo website" />
+        <Header title="Brickbottom Open Studios" />
+        <p>Happening here</p>
         <p className="description">
-          Get started by editing
-          {' '}
-          <code>pages/index.js</code>
+          May 1 &amp; 2, 2021 
         </p>
       </main>
 
