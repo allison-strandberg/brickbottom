@@ -5,7 +5,7 @@ import styles from '@styles/Home.module.scss';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="bg-beige">
       <Head>
         <title>Brickbottom Open Studios</title>
         <link rel="icon" href="/favicon.ico" />

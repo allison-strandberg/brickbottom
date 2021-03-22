@@ -23,19 +23,4 @@
     justify-content: center;
     align-items: center;
   }
-
-  code {
-    background: #fafafa;
-    border-radius: 5px;
-    padding: 0.75rem;
-    font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
-  }
-
-  .container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 }
