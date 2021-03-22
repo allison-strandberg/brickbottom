@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
+import styles from '@styles/Home.module.scss';
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className={styles.container}>
       <Head>
         <title>Brickbottom Open Studios</title>
         <link rel="icon" href="/favicon.ico" />
