@@ -4,10 +4,6 @@ $bb-white: #FCFAF9;
 $bb-black: #333333;
 $bb-red: #A91515;
 
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+a {
+  color: $bb-teal;
 }

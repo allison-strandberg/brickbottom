@@ -5,7 +5,7 @@ import styles from '@styles/Home.module.scss';
 
 export default function Home() {
   return (
-    <div className="bg-beige">
+    <div className="bg-beige h-screen flex flex-col justify-between">
       <Head>
         <title>Brickbottom Open Studios</title>
         <link rel="icon" href="/favicon.ico" />
@@ -13,8 +13,7 @@ export default function Home() {
 
       <main>
         <Header title="Brickbottom Open Studios" />
-        <p>Happening here</p>
-        <p className="description">
+        <p className="m-4">
           May 1 &amp; 2, 2021 
         </p>
       </main>
