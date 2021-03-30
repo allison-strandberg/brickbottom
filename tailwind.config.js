@@ -25,6 +25,7 @@ module.exports = {
     fontFamily: {
       fredericka: ['"Fredericka the Great"', 'serif'],
       'open-sans': ['open-sans', 'sans-serif'],
+      josefin: ['"Josefin Slab"', 'serif'],
     },
   },
   variants: {
