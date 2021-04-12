@@ -1,6 +1,6 @@
 import styles from './layout.module.scss'
 import Head from 'next/head'
-import Footer from '../components/footer';
+import Footer from './footer';
 
 export const siteTitle = 'Brickbottom Open Studios'
 
