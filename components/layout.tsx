@@ -1,3 +1,4 @@
+import styles from './layout.module.scss'
 import Head from 'next/head'
 import Footer from '../components/footer';
 
@@ -5,7 +6,7 @@ export const siteTitle = 'Brickbottom Open Studios'
 
 export default function Layout({ children, home }) {
   return (
-    <div className="bg-beige">
+    <div className={styles.container}>
       <Head>
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
