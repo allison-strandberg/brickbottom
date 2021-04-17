@@ -1,3 +1,5 @@
 ---
-name: Ted Prato
+name:
+  first: Ted
+  last: Prato
 ---

@@ -1,3 +1,5 @@
 ---
-name: Alyson Schulz
+name:
+  first: Alyson
+  last: Schulz
 ---

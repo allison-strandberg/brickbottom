@@ -1,3 +1,5 @@
 ---
-name: Pauline Lim
+name:
+  first: Pauline
+  last: Lim
 ---

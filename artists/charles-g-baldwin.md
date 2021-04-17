@@ -1,3 +1,6 @@
 ---
-name: Charles G. Baldwin
+name:
+  first: Charles
+  middle: G.
+  last: Baldwin
 ---

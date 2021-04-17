@@ -1,3 +1,5 @@
 ---
-name: Rosamund Purcell 
+name:
+  first: Rosamund
+  last: Purcell 
 ---

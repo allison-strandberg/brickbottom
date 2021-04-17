@@ -1,3 +1,5 @@
 ---
-name: Debra Olin
+name:
+  first: Debra
+  last: Olin
 ---

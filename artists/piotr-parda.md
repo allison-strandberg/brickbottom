@@ -1,3 +1,5 @@
 ---
-name: Piotr Parda
+name:
+  first: Piotr
+  last: Parda
 ---

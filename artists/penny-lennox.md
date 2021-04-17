@@ -1,3 +1,5 @@
 ---
-name: Penny Lennox 
+name:
+  first: Penny
+  last: Lennox 
 ---

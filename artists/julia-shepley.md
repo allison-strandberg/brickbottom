@@ -1,3 +1,5 @@
 ---
-name: Julia Shepley
+name:
+  first: Julia
+  last: Shepley
 ---

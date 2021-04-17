@@ -5,7 +5,7 @@ export async function getStaticProps({ params }) {
   const artistData = getArtistData(params.artist)
   return {
     props: {
-      artistData
+      ...artistData
     }
   }
 }
@@ -18,14 +18,25 @@ export async function getStaticPaths() {
   }
 }
 
-export default function Artist({ artistData }) {
+export interface Name {
+  first: string,
+  last: string,
+  middle?: string,
+}
+
+export interface ArtistProps {
+  artist: string,
+  name: Name
+}
+
+export default function Artist ({ artist, name }: ArtistProps) {
   return (
     <>
       <Head>
-        <title>{artistData.name}</title>
+        <title>{ name.first }</title>
       </Head>
       <div className="bg-beige">
-        <h1 className="text-5xl md:text-8xl p-8 font-fredericka">{artistData.name}</h1>
+        <h1 className="text-4xl md:text-7xl p-8 font-fredericka text-center">{ name.first } { name.middle } { name.last }</h1>
       </div>
     </>
   )

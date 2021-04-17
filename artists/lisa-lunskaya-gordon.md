@@ -1,3 +1,6 @@
 ---
-name: Lisa Lunskaya Gordon
+name:
+  first: Lisa
+  middle: Lunskaya
+  last: Gordon
 ---
