@@ -1,3 +1,0 @@
----
-name: Lois Blood Bennett
----
