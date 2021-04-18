@@ -5,7 +5,25 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        buildingTop: '5.5%',
+      },
+      width: {
+        buildingCenter: '64.5%',
+      },
+      gridTemplateRows: {
+        building: 'repeat(4, minmax(0, 23%))',
+        window: '1fr 25%',
+      },
+      gap: {
+        buildingX: '4%',
+        buildingY: '2%',
+      },
+      lineHeight: {
+        building: '250%',
+      },
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
