@@ -10,10 +10,10 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       teal: {
-        DEFAULT: '#14bbca',
+        DEFAULT: '#00a6bf',
       },
       beige: {
-        DEFAULT: '#e4d6bc',
+        DEFAULT: '#e1d4d1',
       },
       red: {
         DEFAULT: 'a91515',
@@ -31,6 +31,17 @@ module.exports = {
       sm: '640px',
       md: '768px',
       lg: '1024px',
+    },
+    borderWidth: {
+      DEFAULT: '1px',
+      0: '0',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px',
+      16: '16px',
+      32: '32px',
     },
   },
   variants: {

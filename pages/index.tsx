@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-import Window from '../components/window'
+import Building from '../components/building'
 import { getArtistsData } from '../lib/artists'
 
 export async function getStaticProps() {
@@ -23,9 +23,7 @@ export default function Home({ allArtistsData }) {
           content="Visit the virtual Open Studios by Brickbottom artists"
         />
       </Head>
-      {allArtistsData.map(({ artist, name }) => (
-        <Window artist={artist} name={name} key={artist} />
-      ))}
+      <Building allArtistsData={allArtistsData} />
     </Layout>
   );
 }

@@ -10,7 +10,7 @@ export default function Window ({ artist, name }: WindowProps) {
   return (
     <div>
       <Link href={`/${artist}`}>
-        <a>{name.first} {name.middle} {name.last}</a>
+        <a className="px-4 no-underline font-fredericka text-black">{name.first} {name.middle} {name.last}</a>
       </Link>
     </div>
   );
