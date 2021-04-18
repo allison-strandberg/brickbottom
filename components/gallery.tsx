@@ -9,7 +9,11 @@ export default function Gallery({ artist, pieces }: GalleryProps) {
   return (
     <div>
       { pieces.map(({ filename, title }) => (
-        <img className="p-4" src={require(`../public/images/${artist}/${filename}`)} />
+        <img
+          className="p-4"
+          src={require(`../public/images/${artist}/${filename}`)} 
+          key={filename}
+        />
       ))}
     </div>
   );
