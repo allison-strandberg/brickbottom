@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Layout from '../components/layout'
+import Gallery from '../components/gallery'
 import { getAllArtists, getArtistData } from '../lib/artists'
 
 export async function getStaticProps({ params }) {
@@ -24,20 +26,28 @@ export interface Name {
   middle?: string,
 }
 
-export interface ArtistProps {
-  artist: string,
-  name: Name
+export interface Piece {
+  filename: string,
+  title: string,
 }
 
-export default function Artist ({ artist, name }: ArtistProps) {
+export type Pieces = Piece[]
+export interface ArtistProps {
+  artist: string,
+  name: Name,
+  pieces: Pieces,
+}
+
+export default function Artist ({ artist, name, pieces }: ArtistProps) {
   return (
-    <>
+    <Layout>
       <Head>
-        <title>{ name.first }</title>
+        <title>{ name.first } { name.middle } { name.last }</title>
       </Head>
       <div className="bg-beige">
         <h1 className="text-4xl md:text-7xl p-8 font-fredericka text-center bg-teal">{ name.first } { name.middle } { name.last }</h1>
       </div>
-    </>
+      <Gallery artist={artist} pieces={pieces} />
+    </Layout>
   )
 }
