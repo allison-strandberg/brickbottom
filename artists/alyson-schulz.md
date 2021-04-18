@@ -7,19 +7,19 @@ website: www.alysonschultz.com
 pieces:
   - filename: ladder.jpg
     title: LADDER (diptych)
-    media: oil on 2 panels
+    materials: oil on 2 panels
     dimensions: 78” x 60”
     year: 2019
     price: $6000
   - filename: ruin.jpg
     title: RUIN (triptych)
-    media: oil on 3 panels
+    materials: oil on 3 panels
     dimensions: 78” x 72”
     year: 2020
     price: $4000
   - filename: exitus.jpg
     title: EXITUS (quadriptych)
-    media: oil on 4 panels
+    materials: oil on 4 panels
     dimensions: 78” x 124”
     year: 2021
     price: $5000
