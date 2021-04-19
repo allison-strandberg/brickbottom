@@ -1,7 +1,8 @@
-import Head from 'next/head'
-import Layout from '../components/layout'
-import Gallery from '../components/gallery'
-import { getAllArtists, getArtistData } from '../lib/artists'
+import Head from 'next/head';
+import Layout from '../components/layout';
+import Header from '../components/header';
+import Gallery from '../components/gallery';
+import { getAllArtists, getArtistData } from '../lib/artists';
 
 export async function getStaticProps({ params }) {
   const artistData = getArtistData(params.artist)
@@ -16,7 +17,7 @@ export async function getStaticPaths() {
   const paths = getAllArtists()
   return {
     paths,
-    fallback: false
+    fallback: false,
   }
 }
 
@@ -50,9 +51,9 @@ export default function Artist ({ artist, name, pieces }: ArtistProps) {
       <Head>
         <title>{ name.first } { name.middle } { name.last }</title>
       </Head>
-      <div>
+      <Header>
         <h1 className="text-4xl md:text-7xl p-8 font-fredericka text-center">{ name.first } { name.middle } { name.last }</h1>
-      </div>
+      </Header>
       <Gallery artist={artist} pieces={pieces} />
     </Layout>
   )
