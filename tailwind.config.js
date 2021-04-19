@@ -20,8 +20,11 @@ module.exports = {
         buildingX: '4%',
         buildingY: '2%',
       },
-      lineHeight: {
-        building: '250%',
+      fontSize: {
+        buildingXs: ['0.75rem', '250%'],
+        buildingSm: ['0.875rem', '250%'],
+        buildingBase: ['1rem', '250%'],
+        buildingLg: ['1.125rem', '250%'],
       },
     },
     colors: {
@@ -47,8 +50,8 @@ module.exports = {
     },
     screens: {
       sm: '640px',
-      md: '768px',
-      lg: '1024px',
+      md: '820px',
+      lg: '1140px',
     },
     borderWidth: {
       DEFAULT: '1px',

@@ -7,12 +7,12 @@ interface GalleryProps {
 
 export default function Gallery({ artist, pieces }: GalleryProps) {
   return (
-    <div>
+    <div className="flex flex-wrap justify-center max-w-2xl">
       { pieces.map(({ filename, title }) => (
         <img
-          className="p-4"
+          className="w-32 h-32 p-2"
           src={require(`../public/images/${artist}/${filename}`)} 
-          key={filename}
+          key={`${filename}-thumb`}
         />
       ))}
     </div>
