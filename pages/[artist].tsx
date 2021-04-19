@@ -30,9 +30,11 @@ export interface Piece {
   filename: string,
   title: string,
   materials?: string,
+  location?: string,
   dimensions?: string,
   year?: string | number,
   price?: string | number,
+  note?: string,
 }
 
 export type Pieces = Piece[]

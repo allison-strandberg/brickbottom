@@ -16,13 +16,15 @@ export default function Gallery({ artist, pieces }: GalleryProps) {
       showThumbnailsButton: false,
     }
   };
-  const captions = pieces.map(({ title, materials, dimensions, year, price }) => (
-    <div>
-      <span className="text-3xl"><p>{title}</p></span>
+  const captions = pieces.map(({ title, materials, location, dimensions, year, price, note }) => (
+    <div className="text-sm">
+      <span className="text-2xl"><p>{title}</p></span>
       <p>{materials}</p>
+      <p>{location}</p>
       <p>{dimensions}</p>
       <p>{year}</p>
       <p>{price}</p>
+      <p>{note}</p>
     </div>
   ));
   const customCaptions = captions.map((caption, index) => (

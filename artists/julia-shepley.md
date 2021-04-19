@@ -17,12 +17,12 @@ pieces:
     year: 2020
   - filename: expandableWalkingWindow3.jpg
     title: "Expandable Walking Window #3"
-    materials: wood, waxed linen
+    materials: Wood, waxed linen
     dimensions: each approximately 2.5’ x 3’ x .5’
     year: 2019
   - filename: nightWindow.jpg
     title: Night Window
-    materials: mixed media
+    materials: Mixed media
     dimensions: 16” x 14” x 5”
     year: 2020
   - filename: windowShadow.jpg
