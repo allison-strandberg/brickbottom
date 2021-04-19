@@ -1,4 +1,5 @@
 import { Pieces } from '../pages/[artist]';
+import { SRLWrapper } from 'simple-react-lightbox-pro'
 
 interface GalleryProps {
   artist: string,
@@ -6,16 +7,39 @@ interface GalleryProps {
 }
 
 export default function Gallery({ artist, pieces }: GalleryProps) {
-  return (
-    <div className="flex flex-wrap justify-center max-w-2xl">
-      { pieces.map(({ filename, title }) => (
-        <img
-          className="w-32 h-32 p-2"
-          src={require(`../public/images/${artist}/${filename}`)} 
-          key={`${filename}-thumb`}
-        />
-      ))}
+  const options = {
+    settings: {
+      autoplaySpeed: 0,
+    },
+    buttons: {
+      showDownloadButton: false,
+      showThumbnailsButton: false,
+    }
+  };
+  const captions = pieces.map(({ title, materials, dimensions, year, price }) => (
+    <div>
+      <span className="text-3xl"><p>{title}</p></span>
+      <p>{materials}</p>
+      <p>{dimensions}</p>
+      <p>{year}</p>
+      <p>{price}</p>
     </div>
+  ));
+  const customCaptions = captions.map((caption, index) => (
+    { id: index, caption }
+  ));
+  return (
+    <SRLWrapper options={options} customCaptions={customCaptions}>
+      <div className="flex flex-wrap justify-center max-w-2xl">
+        { pieces.map(({ filename }) => (
+          <img
+            className="w-32 h-32 p-2"
+            src={require(`../public/images/${artist}/${filename}`)} 
+            key={`${filename}-thumb`}
+          />
+        ))}
+      </div>
+    </SRLWrapper>
   );
 }
 

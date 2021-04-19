@@ -29,6 +29,10 @@ export interface Name {
 export interface Piece {
   filename: string,
   title: string,
+  materials?: string,
+  dimensions?: string,
+  year?: string | number,
+  price?: string | number,
 }
 
 export type Pieces = Piece[]
