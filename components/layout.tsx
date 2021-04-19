@@ -1,21 +1,9 @@
-import styles from './layout.module.scss'
-import Head from 'next/head'
 import Footer from './footer';
 
-export const siteTitle = 'Brickbottom Open Studios'
-
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>{siteTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Visit the virtual Open Studios by Brickbottom artists"
-        />
-      </Head>
-      <main>{children}</main>
+    <div className='bg-beige'>
+      <main className='bg-beige'>{children}</main>
       <Footer />
     </div>
   )

@@ -1,11 +1,14 @@
-import Head from 'next/head'
-import { getAllArtists, getArtistData } from '../lib/artists'
+import Head from 'next/head';
+import Layout from '../components/layout';
+import Header from '../components/header';
+import Gallery from '../components/gallery';
+import { getAllArtists, getArtistData } from '../lib/artists';
 
 export async function getStaticProps({ params }) {
   const artistData = getArtistData(params.artist)
   return {
     props: {
-      artistData
+      ...artistData
     }
   }
 }
@@ -14,19 +17,44 @@ export async function getStaticPaths() {
   const paths = getAllArtists()
   return {
     paths,
-    fallback: false
+    fallback: false,
   }
 }
 
-export default function Artist({ artistData }) {
+export interface Name {
+  first: string,
+  last: string,
+  middle?: string,
+}
+
+export interface Piece {
+  filename: string,
+  title: string,
+  materials?: string,
+  location?: string,
+  dimensions?: string,
+  year?: string | number,
+  price?: string | number,
+  note?: string,
+}
+
+export type Pieces = Piece[]
+export interface ArtistProps {
+  artist: string,
+  name: Name,
+  pieces: Pieces,
+}
+
+export default function Artist ({ artist, name, pieces }: ArtistProps) {
   return (
-    <>
+    <Layout>
       <Head>
-        <title>{artistData.name}</title>
+        <title>{ name.first } { name.middle } { name.last }</title>
       </Head>
-      <div className="bg-beige">
-        <h1 className="text-5xl md:text-8xl p-8 font-fredericka">{artistData.name}</h1>
-      </div>
-    </>
+      <Header>
+        <h1 className="text-4xl md:text-7xl p-8 font-fredericka text-center">{ name.first } { name.middle } { name.last }</h1>
+      </Header>
+      <Gallery artist={artist} pieces={pieces} />
+    </Layout>
   )
 }

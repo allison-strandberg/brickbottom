@@ -1,14 +1,29 @@
+import Head from 'next/head'
 import Layout from '../components/layout'
+import Building from '../components/building'
+import { getArtistsData } from '../lib/artists'
 
-export default function Home() {
+export async function getStaticProps() {
+  const allArtistsData = getArtistsData()
+  return {
+    props: {
+      allArtistsData
+    }
+  }
+}
+
+export default function Home({ allArtistsData }) {
   return (
-    <Layout home>
-      <div className="text-center">
-        <h1 className="text-5xl md:text-8xl p-8 font-fredericka">Brickbottom <br /> Open Studios</h1>
-        <p className="text-3xl md:text-5xl p-8 font-josefin">
-          May 1 &amp; 2, 2021 
-        </p>
-      </div>
+    <Layout>
+      <Head>
+        <title>Brickbottom Open Studios</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Visit the virtual Open Studios by Brickbottom artists"
+        />
+      </Head>
+      <Building allArtistsData={allArtistsData} />
     </Layout>
   );
 }

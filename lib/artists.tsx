@@ -21,10 +21,18 @@ export function getArtistsData() {
     // Combine the data with the artist
     return {
       artist,
-      ...matterResult.data
+      name: matterResult.data.name,
+      ...matterResult.data,
     }
   })
-  return allArtistsData;
+  // Sort artists by last name
+  return allArtistsData.sort((a, b) => {
+    if (a.name.last > b.name.last) {
+      return 1
+    } else {
+      return -1
+    }
+  })
 }
 
 export function getAllArtists() {
