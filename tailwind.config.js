@@ -26,22 +26,25 @@ module.exports = {
         buildingBase: ['1rem', '250%'],
         buildingLg: ['1.125rem', '250%'],
       },
-    },
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      teal: {
-        DEFAULT: '#187b97',
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        teal: {
+          DEFAULT: '#187b97',
+        },
+        beige: {
+          DEFAULT: '#e1d4d1',
+        },
+        red: {
+          DEFAULT: '#a91515',
+        },
+        black: colors.black,
+        white: colors.white,
+        gray: colors.trueGray,
       },
-      beige: {
-        DEFAULT: '#e1d4d1',
+      minWidth: {
+        lg: '1140px',
       },
-      red: {
-        DEFAULT: '#a91515',
-      },
-      black: colors.black,
-      white: colors.white,
-      gray: colors.trueGray,
     },
     fontFamily: {
       fredericka: ['"Fredericka the Great"', 'serif'],

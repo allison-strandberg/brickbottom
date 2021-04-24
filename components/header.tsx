@@ -7,12 +7,15 @@ interface HeaderProps {
 
 export default function Header({ fullName, home }: HeaderProps) {
   return (
-    <div className="absolute z-10">
-      <img
-        src={require('../public/images/header.webp')}
-        alt=""
-        role="presentation"
-      />
+    <div className="fixed z-10 flex justify-center">
+      <div>
+        <img
+          className="min-w-lg"
+          src={require('../public/images/header.webp')}
+          alt=""
+          role="presentation"
+        />
+      </div>
       <header className="flex justify-center items-center absolute top-0 h-full w-full">
         { !home && (
           <Link href="/">
@@ -21,7 +24,7 @@ export default function Header({ fullName, home }: HeaderProps) {
             </a>
           </Link>
         )}
-        <h1 className="font-fredericka text-center">{
+        <h1 className="font-fredericka text-center text-xl md:text-2xl">{
           fullName ? fullName : 'Brickbottom Open Studios'
         }</h1>
       </header>

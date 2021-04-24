@@ -10,9 +10,9 @@ interface LayoutProps {
 
 export default function Layout({ fullName, home, children }: LayoutProps) {
   return (
-    <div className='bg-beige'>
+    <div className='bg-gray-500'>
       <Header fullName={fullName} home={home} />
-      <main className='bg-beige'>{children}</main>
+      <main className='bg-gray-500'>{children}</main>
       <Footer />
     </div>
   )
