@@ -7,18 +7,18 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        buildingTop: '5.5%',
+        buildingTop: '6%',
       },
       width: {
-        buildingCenter: '64.5%',
+        buildingCenter: '59%',
       },
       gridTemplateRows: {
-        building: 'repeat(4, minmax(0, 23%))',
+        building: 'repeat(4, minmax(0, 16.7%))',
         window: '1fr 25%',
       },
       gap: {
         buildingX: '4%',
-        buildingY: '2%',
+        buildingY: '1.6%',
       },
       fontSize: {
         buildingXs: ['0.75rem', '250%'],
