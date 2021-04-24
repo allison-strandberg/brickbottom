@@ -14,7 +14,7 @@ export default function Building({ allArtistsData }: BuildingProps) {
           className="w-buildingCenter h-full grid grid-cols-3 grid-rows-building gap-x-buildingX gap-y-buildingY"
         >
           {allArtistsData.map(({ artist, name }) => (
-            <Window artist={artist} name={name} key={artist} />
+            <Window artist={artist} fullName={name.full} key={artist} />
           ))}
         </div>
       </div>

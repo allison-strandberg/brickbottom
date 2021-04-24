@@ -32,7 +32,8 @@
   }
 
   a {
-    color: #14BBCA;
+    /* teal */
+    color: #187b97;  
     text-decoration: underline;
   }
 }

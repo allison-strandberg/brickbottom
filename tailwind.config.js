@@ -31,13 +31,13 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       teal: {
-        DEFAULT: '#00a6bf',
+        DEFAULT: '#187b97',
       },
       beige: {
         DEFAULT: '#e1d4d1',
       },
       red: {
-        DEFAULT: 'a91515',
+        DEFAULT: '#a91515',
       },
       black: colors.black,
       white: colors.white,

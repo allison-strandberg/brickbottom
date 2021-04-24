@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
-import Header from '../components/header';
 import Gallery from '../components/gallery';
 import { getAllArtists, getArtistData } from '../lib/artists';
 
@@ -24,6 +23,7 @@ export async function getStaticPaths() {
 export interface Name {
   first: string,
   last: string,
+  full: string,
   middle?: string,
 }
 
@@ -47,13 +47,10 @@ export interface ArtistProps {
 
 export default function Artist ({ artist, name, pieces }: ArtistProps) {
   return (
-    <Layout>
+    <Layout fullName={name.full}>
       <Head>
-        <title>{ name.first } { name.middle } { name.last }</title>
+        <title>{ name.full }</title>
       </Head>
-      <Header>
-        <h1 className="text-4xl md:text-7xl p-8 font-fredericka text-center">{ name.first } { name.middle } { name.last }</h1>
-      </Header>
       <Gallery artist={artist} pieces={pieces} />
     </Layout>
   )
