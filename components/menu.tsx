@@ -16,10 +16,6 @@ export default function Menu () {
         </svg>
         <span className="px-2">Menu</span>
       </button>
-      { open && (
-        <div className="absolute w-40 h-60 bg-green-400">
-        </div>
-      )}
     </div>
   );
 }
