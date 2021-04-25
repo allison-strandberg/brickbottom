@@ -13,12 +13,12 @@ module.exports = {
         buildingCenter: '59%',
       },
       gridTemplateRows: {
-        building: 'repeat(4, minmax(0, 16.7%))',
+        building: 'repeat(4, minmax(0, 16.8%))',
         window: '1fr 25%',
       },
       gap: {
         buildingX: '4%',
-        buildingY: '1.6%',
+        buildingY: '1.5%',
       },
       fontSize: {
         buildingXs: ['0.75rem', '250%'],
@@ -30,10 +30,10 @@ module.exports = {
         transparent: 'transparent',
         current: 'currentColor',
         teal: {
-          DEFAULT: '#187b97',
+          DEFAULT: '#2da5ce',
         },
         beige: {
-          DEFAULT: '#e1d4d1',
+          DEFAULT: '#fff5ff',
         },
         red: {
           DEFAULT: '#a91515',
