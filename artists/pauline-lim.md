@@ -2,11 +2,11 @@
 name:
   first: Pauline
   last: Lim
-website: www.paulinelim.net
-website2: https://pixels.com/profiles/pauline-lim/shop
-instagram: https://www.instagram.com/Lim_pauline/
-twitter: https://twitter.com/PaulineLim7
-facebook: https://www.facebook.com/Pauline-Lim-Artwork-149750155097216
+website: paulinelim.net
+website2: pixels.com/profiles/pauline-lim/shop
+instagram: Lim_pauline
+twitter: PaulineLim7
+facebook: Pauline-Lim-Artwork-149750155097216
 pieces:
   - filename: MyEarlyLife2.jpg
     title: My Early Life 2

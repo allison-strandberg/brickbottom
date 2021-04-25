@@ -1,30 +1,23 @@
+import remark from 'remark'
+import html from 'remark-html'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { Name } from '../pages/[artist]';
 
 const artistsDirectory = path.join(process.cwd(), 'artists')
 
-export function getArtistsData() {
+export async function getArtistsData() {
   // Get file names under /artists
-  const fileNames = fs.readdirSync(artistsDirectory)
-  const allArtistsData = fileNames.map(fileName => {
+  const fileNames = fs.readdirSync(artistsDirectory);
+  const allArtists = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
-    const artist = fileName.replace(/\.md$/, '')
-
-    // Read markdown file as string
-    const fullPath = path.join(artistsDirectory, fileName)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-
-    // Use gray-matter to parse the artist metadata section
-    const matterResult = matter(fileContents)
-
-    // Combine the data with the artist
-    return {
-      artist,
-      name: matterResult.data.name,
-      ...matterResult.data,
-    }
-  })
+    return fileName.replace(/\.md$/, '')
+  });
+  const allArtistsData = await Promise.all(allArtists.map(async (artist) => {
+    const data = await getArtistData(artist);
+    return data;
+  }))
   // Sort artists by last name
   return allArtistsData.sort((a, b) => {
     if (a.name.last > b.name.last) {
@@ -60,16 +53,33 @@ export function getAllArtists() {
   })
 }
 
-export function getArtistData(artist) {
+export async function getArtistData(artist) {
   const fullPath = path.join(artistsDirectory, `${artist}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents)
 
+  // Use remark to convert markdown into HTML string
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content)
+  const contentHtml = processedContent.toString()
+
+  // Create full name string
+  const fullName = [
+    matterResult.data.name.first,
+    matterResult.data.name.middle,
+    matterResult.data.name.last,
+  ].join(' ');
+
+  const name: Name = {full: fullName, ...matterResult.data.name};
+
   // Combine the data with the artist
   return {
     artist,
-    ...matterResult.data
+    statement: contentHtml,
+    ...matterResult.data,
+    name,
   }
 }

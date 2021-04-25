@@ -2,8 +2,8 @@
 name:
   first: Piotr
   last: Parda
-website: www.piotrparda.com
-instagram: https://www.instagram.com/parda.piotr/
+website: piotrparda.com
+instagram: parda.piotr
 pieces:
   - filename: Brightness.jpg
     title: Brightness

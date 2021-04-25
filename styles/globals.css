@@ -32,7 +32,15 @@
   }
 
   a {
-    color: #14BBCA;
-    text-decoration: underline;
+    /* teal */
+    color: #2da5ce;  
+  }
+
+  .statement p {
+    padding-top: 1rem;
+  }
+
+  .gallery-item {
+    cursor: pointer;
   }
 }

@@ -2,10 +2,9 @@
 name:
   first: Debra
   last: Olin
-website: www.debraolin.com
+website: debraolin.com
 email: debra@debraolin.com
-phone: 617-957-0628
-instagram: https://www.instagram.com/debraolin7/
+instagram: debraolin7
 pieces:
   - filename: upMySpine.jpg
     title: Up My Spine

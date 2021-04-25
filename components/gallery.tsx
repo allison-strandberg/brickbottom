@@ -32,14 +32,16 @@ export default function Gallery({ artist, pieces }: GalleryProps) {
   ));
   return (
     <SRLWrapper options={options} customCaptions={customCaptions}>
-      <div className="flex flex-wrap justify-center max-w-2xl">
-        { pieces.map(({ filename }) => (
-          <img
-            className="w-64 h-32 p-2 m-2 object-cover border-3 border-gray-600 border-opacity-20"
-            src={require(`../public/images/${artist}/${filename}`)}
-            key={`${filename}-thumb`}
-          />
-        ))}
+      <div className="flex flex-wrap justify-center max-w-4xl">
+        { pieces.map(({ filename }) => {
+          return (
+            <img
+              className="w-64 h-32 m-2 object-cover border-4 border-gray-800 gallery-item transition duration-300 hover:border-gray-500"
+              src={require(`../public/images/${artist}/${filename}`)}
+              key={`${filename}-thumb`}
+            />
+          )
+        })}
       </div>
     </SRLWrapper>
   );

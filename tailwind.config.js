@@ -7,18 +7,21 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        buildingTop: '5.5%',
+        buildingTop: '6%',
       },
       width: {
-        buildingCenter: '64.5%',
+        buildingCenter: '59%',
       },
       gridTemplateRows: {
-        building: 'repeat(4, minmax(0, 23%))',
+        building: 'repeat(4, minmax(0, 16.8%))',
         window: '1fr 25%',
+      },
+      gridTemplateColumns: {
+        header: '18.5% 1fr 18.5%',
       },
       gap: {
         buildingX: '4%',
-        buildingY: '2%',
+        buildingY: '1.5%',
       },
       fontSize: {
         buildingXs: ['0.75rem', '250%'],
@@ -26,22 +29,28 @@ module.exports = {
         buildingBase: ['1rem', '250%'],
         buildingLg: ['1.125rem', '250%'],
       },
-    },
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      teal: {
-        DEFAULT: '#00a6bf',
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        teal: {
+          DEFAULT: '#2da5ce',
+        },
+        beige: {
+          DEFAULT: '#fff5ff',
+        },
+        red: {
+          DEFAULT: '#a91515',
+        },
+        black: colors.black,
+        white: colors.white,
+        gray: colors.trueGray,
       },
-      beige: {
-        DEFAULT: '#e1d4d1',
+      minWidth: {
+        lg: '1140px',
       },
-      red: {
-        DEFAULT: 'a91515',
+      minHeight: {
+        '2rem': '2rem',
       },
-      black: colors.black,
-      white: colors.white,
-      gray: colors.trueGray,
     },
     fontFamily: {
       fredericka: ['"Fredericka the Great"', 'serif'],

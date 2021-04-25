@@ -4,7 +4,7 @@ import Building from '../components/building'
 import { getArtistsData } from '../lib/artists'
 
 export async function getStaticProps() {
-  const allArtistsData = getArtistsData()
+  const allArtistsData = await getArtistsData()
   return {
     props: {
       allArtistsData
@@ -14,7 +14,7 @@ export async function getStaticProps() {
 
 export default function Home({ allArtistsData }) {
   return (
-    <Layout>
+    <Layout home>
       <Head>
         <title>Brickbottom Open Studios</title>
         <link rel="icon" href="/favicon.ico" />

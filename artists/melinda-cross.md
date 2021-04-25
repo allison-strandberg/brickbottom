@@ -3,7 +3,7 @@ name:
   first: Melinda
   last: Cross
 email: Melindacrossfineart at gmail.com
-website: https://www.melindacrossfineart.com/
+website: melindacrossfineart.com
 pieces:
   - filename: MelindaCross01.jpg
     title: Dots
