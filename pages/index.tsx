@@ -4,7 +4,7 @@ import Building from '../components/building'
 import { getArtistsData } from '../lib/artists'
 
 export async function getStaticProps() {
-  const allArtistsData = getArtistsData()
+  const allArtistsData = await getArtistsData()
   return {
     props: {
       allArtistsData

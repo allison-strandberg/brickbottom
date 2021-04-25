@@ -36,4 +36,8 @@
     color: #2da5ce;  
     text-decoration: underline;
   }
+
+  p {
+    padding-top: 1rem;
+  }
 }

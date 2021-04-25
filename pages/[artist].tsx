@@ -5,7 +5,7 @@ import Social from '../components/social';
 import { getAllArtists, getArtistData } from '../lib/artists';
 
 export async function getStaticProps({ params }) {
-  const artistData = getArtistData(params.artist)
+  const artistData = await getArtistData(params.artist)
   return {
     props: {
       ...artistData
@@ -43,6 +43,7 @@ export type Pieces = Piece[]
 export interface ArtistProps {
   artist: string,
   name: Name,
+  pieces: Pieces,
   email?: string,
   website?: string,
   website2?: string,
@@ -51,12 +52,13 @@ export interface ArtistProps {
   phone?: string,
   twitter?: string,
   facebook?: string,
-  pieces: Pieces,
+  statement?: string,
 }
 
 export default function Artist ({
   artist,
   name,
+  pieces,
   email,
   website,
   website2,
@@ -65,25 +67,30 @@ export default function Artist ({
   phone,
   twitter,
   facebook,
-  pieces,
+  statement,
 }: ArtistProps) {
   return (
     <Layout fullName={name.full}>
       <Head>
         <title>{ name.full }</title>
       </Head>
-      <div className="pt-20 flex">
+      <div className="pt-20 flex flex-wrap justify-center">
         <Gallery artist={artist} pieces={pieces} />
-        <Social
-          email={email}
-          website={website}
-          website2={website2}
-          instagram={instagram}
-          address={address}
-          phone={phone}
-          twitter={twitter}
-          facebook={facebook}
-        />
+        <div className="text-white font-open-sans m-2 lg:w-1/4">
+          <Social
+            email={email}
+            website={website}
+            website2={website2}
+            instagram={instagram}
+            address={address}
+            phone={phone}
+            twitter={twitter}
+            facebook={facebook}
+          />
+          <div
+            dangerouslySetInnerHTML={{ __html: statement }}
+          />
+        </div>
       </div>
     </Layout>
   )
