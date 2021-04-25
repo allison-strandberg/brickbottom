@@ -45,6 +45,9 @@ module.exports = {
       minWidth: {
         lg: '1140px',
       },
+      minHeight: {
+        '2rem': '2rem',
+      },
     },
     fontFamily: {
       fredericka: ['"Fredericka the Great"', 'serif'],
