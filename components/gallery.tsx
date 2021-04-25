@@ -35,7 +35,7 @@ export default function Gallery({ artist, pieces }: GalleryProps) {
       <div className="flex flex-wrap justify-center max-w-4xl mb-20">
         { pieces.map(({ filename }) => (
           <img
-            className="w-64 h-32 m-2 object-cover border-4 border-gray-800 gallery-item"
+            className="w-64 h-32 m-2 object-cover border-4 border-gray-800 gallery-item transition duration-300 hover:border-gray-500"
             src={require(`../public/images/${artist}/${filename}`)}
             key={`${filename}-thumb`}
           />
