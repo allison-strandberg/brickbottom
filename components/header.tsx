@@ -22,7 +22,7 @@ export default function Header({ fullName, home }: HeaderProps) {
             </a>
           </Link>
         )}
-        <h1 className="font-fredericka text-center text-xl md:text-2xl">{
+        <h1 className="font-fredericka text-gray-700 text-center text-xl md:text-2xl">{
           fullName ? fullName : 'Brickbottom Open Studios'
         }</h1>
       </header>

@@ -72,7 +72,8 @@ export default function Artist ({
       <Head>
         <title>{ name.full }</title>
       </Head>
-      <div className="pt-20">
+      <div className="pt-20 flex">
+        <Gallery artist={artist} pieces={pieces} />
         <Social
           email={email}
           website={website}
@@ -83,7 +84,6 @@ export default function Artist ({
           twitter={twitter}
           facebook={facebook}
         />
-        <Gallery artist={artist} pieces={pieces} />
       </div>
     </Layout>
   )
