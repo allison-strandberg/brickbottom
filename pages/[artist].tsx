@@ -75,7 +75,15 @@ export default function Artist ({
         <title>{ name.full }</title>
       </Head>
       <div className="mt-20 flex flex-wrap lg:flex-nowrap justify-around">
-        <Gallery artist={artist} pieces={pieces} />
+        <div className="flex flex-col items-center">
+          <Gallery artist={artist} pieces={pieces} />
+          { (artist === 'alyson-schulz') && (
+          <div
+              className="statement m-2 py-8 text-white max-w-2xl"
+              dangerouslySetInnerHTML={{ __html: statement }}
+            />
+          )}
+        </div>
         {(email || website || website2 || instagram || address || phone || twitter || facebook || statement ) && (
           <div className="text-white font-open-sans lg:w-1/4">
             <Social
@@ -88,10 +96,12 @@ export default function Artist ({
               twitter={twitter}
               facebook={facebook}
             />
-            <div
-              className="py-8"
-              dangerouslySetInnerHTML={{ __html: statement }}
-            />
+            { (artist !== 'alyson-schulz') && (
+              <div
+                className="statement py-8 px-2"
+                dangerouslySetInnerHTML={{ __html: statement }}
+              />
+            )}
           </div>
         )}
       </div>

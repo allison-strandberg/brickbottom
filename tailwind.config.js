@@ -16,6 +16,9 @@ module.exports = {
         building: 'repeat(4, minmax(0, 16.8%))',
         window: '1fr 25%',
       },
+      gridTemplateColumns: {
+        header: '18.5% 1fr 18.5%',
+      },
       gap: {
         buildingX: '4%',
         buildingY: '1.5%',
