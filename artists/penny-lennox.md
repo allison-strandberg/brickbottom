@@ -2,8 +2,8 @@
 name:
   first: Penny
   last: Lennox
-website: www.pennylennox.com
-instagram: https://www.instagram.com/pslennox/
+website: pennylennox.com
+instagram: pslennox
 pieces:
   - filename: Smokeshow1.jpg
     title: Smokeshow 1

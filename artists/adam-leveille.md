@@ -2,9 +2,9 @@
 name:
   first: Adam
   last: Leveille
-website: https://adamsartwork.me/
-website2: https://www.somervilleopenstudios.org/web/artists/artist_profile/70
-instagram: https://www.instagram.com/adam_Leveille/
+website: adamsartwork.me
+website2: somervilleopenstudios.org/web/artists/artist_profile/70
+instagram: adam_Leveille
 pieces:
   - filename: Dreams4.jpg
     title: 'Dreams #4 (Sprite)'

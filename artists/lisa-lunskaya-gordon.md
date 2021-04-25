@@ -3,7 +3,7 @@ name:
   first: Lisa
   middle: Lunskaya
   last: Gordon
-website: https://www.oldsignora.com/
+website: oldsignora.com
 pieces:
   - filename: 1.jpg
     title: SPUTNIK VIRUS

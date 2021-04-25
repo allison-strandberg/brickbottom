@@ -17,12 +17,12 @@ export default function Header({ fullName, home }: HeaderProps) {
       <header className="flex justify-center items-center absolute top-0 h-full w-full backdrop-filter backdrop-blur lg:backdrop-brightness-150">
         { !home && (
           <Link href="/">
-            <a className="absolute no-underline left-0 px-2 m-2 text-xl md:text-2xl p-1 font-fredericka border-2 border-teal rounded-sm">
+            <a className="absolute no-underline left-0 px-2 m-2 text-base md:text-xl p-1 font-fredericka border-2 border-teal rounded-sm hover:bg-opacity-50 transition duration-300 hover:bg-white">
             ← Back
             </a>
           </Link>
         )}
-        <h1 className="font-fredericka text-gray-700 text-center text-xl md:text-2xl">{
+        <h1 className="font-fredericka text-gray-700 text-center text-xl md:text-3xl">{
           fullName ? fullName : 'Brickbottom Open Studios'
         }</h1>
       </header>

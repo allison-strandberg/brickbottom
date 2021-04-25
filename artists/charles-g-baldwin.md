@@ -3,8 +3,8 @@ name:
   first: Charles
   middle: G.
   last: Baldwin
-website: https://brickbottom.org/profile/Charles+Baldwin/
-instagram: https://www.instagram.com/HancocknFellows/
+website: brickbottom.org/profile/Charles+Baldwin/
+instagram: HancocknFellows
 pieces:
   - filename: LBL.jpeg
     title: LBL

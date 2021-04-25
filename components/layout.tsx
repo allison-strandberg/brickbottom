@@ -10,9 +10,11 @@ interface LayoutProps {
 
 export default function Layout({ fullName, home, children }: LayoutProps) {
   return (
-    <div className='bg-gray-700'>
-      <Header fullName={fullName} home={home} />
-      <main className='bg-gray-700'>{children}</main>
+    <div className='flex flex-col justify-between bg-gray-700'>
+      <div>
+        <Header fullName={fullName} home={home} />
+        <main className='bg-gray-700'>{children}</main>
+      </div>
       <Footer />
     </div>
   )

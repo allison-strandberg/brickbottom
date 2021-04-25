@@ -74,7 +74,7 @@ export default function Artist ({
       <Head>
         <title>{ name.full }</title>
       </Head>
-      <div className="pt-20 flex flex-nowrap justify-around">
+      <div className="mt-20 flex flex-wrap lg:flex-nowrap justify-around">
         <Gallery artist={artist} pieces={pieces} />
         {(email || website || website2 || instagram || address || phone || twitter || facebook || statement ) && (
           <div className="text-white font-open-sans lg:w-1/4">
