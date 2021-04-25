@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Menu from './menu';
 
 interface HeaderProps {
   fullName?: string,
@@ -18,7 +19,7 @@ export default function Header({ fullName, home }: HeaderProps) {
         { !home && (
           <div className="flex justify-center absolute top-0 left-0 lg:relative">
             <Link href="/">
-              <a className="no-underline px-2 lg:m-2 text-base md:text-xl p-1 font-fredericka border-2 border-teal rounded-sm transition duration-300 hover:bg-white hover:bg-opacity-50">
+              <a className="flex justify-center items-center w-full px-2 lg:m-2 text-base md:text-xl p-1 font-fredericka text-teal bg-white bg-opacity-50 rounded-sm transition duration-300 hover:bg-opacity-100 shadow hover:shadow-xl">
               ← Back
               </a>
             </Link>
@@ -27,6 +28,7 @@ export default function Header({ fullName, home }: HeaderProps) {
         <h1 className="col-start-2 flex items-center justify-center font-fredericka text-gray-700 text-center text-xl md:text-3xl">{
           fullName ? fullName : 'Brickbottom Open Studios'
         }</h1>
+        <Menu />
       </header>
     </div>
   );
