@@ -74,23 +74,26 @@ export default function Artist ({
       <Head>
         <title>{ name.full }</title>
       </Head>
-      <div className="pt-20 flex flex-wrap justify-center">
+      <div className="pt-20 flex flex-nowrap justify-around">
         <Gallery artist={artist} pieces={pieces} />
-        <div className="text-white font-open-sans m-2 lg:w-1/4">
-          <Social
-            email={email}
-            website={website}
-            website2={website2}
-            instagram={instagram}
-            address={address}
-            phone={phone}
-            twitter={twitter}
-            facebook={facebook}
-          />
-          <div
-            dangerouslySetInnerHTML={{ __html: statement }}
-          />
-        </div>
+        {(email || website || website2 || instagram || address || phone || twitter || facebook || statement ) && (
+          <div className="text-white font-open-sans lg:w-1/4">
+            <Social
+              email={email}
+              website={website}
+              website2={website2}
+              instagram={instagram}
+              address={address}
+              phone={phone}
+              twitter={twitter}
+              facebook={facebook}
+            />
+            <div
+              className="py-8"
+              dangerouslySetInnerHTML={{ __html: statement }}
+            />
+          </div>
+        )}
       </div>
     </Layout>
   )

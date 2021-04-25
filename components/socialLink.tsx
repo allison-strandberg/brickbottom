@@ -8,7 +8,7 @@ export default function SocialLink({ icon, item, children }: SocialLinkProps) {
   return (
     <>
       {item && (
-        <div className="flex items-center">
+        <div className="flex items-center py-2">
           <img
             className="filter invert w-10"
             src={require(`../public/images/icons/${icon}.png`)}
