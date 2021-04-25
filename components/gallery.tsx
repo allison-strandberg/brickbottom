@@ -32,7 +32,7 @@ export default function Gallery({ artist, pieces }: GalleryProps) {
   ));
   return (
     <SRLWrapper options={options} customCaptions={customCaptions}>
-      <div className="flex flex-wrap justify-center max-w-2xl pt-20">
+      <div className="flex flex-wrap justify-center max-w-2xl">
         { pieces.map(({ filename }) => (
           <img
             className="w-64 h-32 m-2 object-cover border-3 border-gray-900 border-opacity-20"
