@@ -40,4 +40,8 @@
   p {
     padding-top: 1rem;
   }
+
+  .gallery-item {
+    cursor: pointer;
+  }
 }
