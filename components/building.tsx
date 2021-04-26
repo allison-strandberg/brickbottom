@@ -16,6 +16,15 @@ export default function Building({ allArtistsData }: BuildingProps) {
           {allArtistsData.map(({ artist, name }) => (
             <Window artist={artist} fullName={name.full} key={artist} />
           ))}
+          <div className="col-start-2 row-start-6 lg:grid grid-cols-door hidden">
+            <a
+              className="col-start-2 flex justify-center pt-2 rounded-sm transition duration-300 bg-opacity-50 hover:bg-opacity-50 border-4 border-beige hover:bg-beige font-fredericka text-lg lg:text-buildingLg text-white cursor-pointer"
+              href="https://brickbottom.org/exhibition/recycle-remake-reimagine/"
+              target="_blank"
+            >
+              Gallery
+            </a>
+          </div>
         </div>
       </div>
       <img

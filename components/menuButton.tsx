@@ -1,13 +1,14 @@
-import { useState } from 'react'; 
+interface MenuButtonProps {
+  menuOpen: Boolean,
+  setMenuOpen: Function,
+}
 
-export default function Menu () {
-  const [open, setOpen] = useState(false);
-
+export default function MenuButton({ menuOpen, setMenuOpen }) {
   return (
     <div className="flex justify-center absolute top-0 right-0 lg:relative">
       <button
         className="flex justify-center items-center w-full px-2 lg:m-2 text-base md:text-xl p-1 font-fredericka text-teal bg-white bg-opacity-50 rounded-sm transition duration-300 hover:bg-opacity-100 shadow hover:shadow-xl"
-        onClick={() => setOpen(!open)}
+        onClick={() => setMenuOpen(!menuOpen)}
       >
         <svg viewBox="0 0 100 70" width="25" fill="currentColor">
           <rect width="100" height="10"></rect>

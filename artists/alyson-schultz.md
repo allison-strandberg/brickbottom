@@ -1,7 +1,7 @@
 ---
 name:
   first: Alyson
-  last: Schulz
+  last: Schultz
 address: 1 Fitchburg St. C209, Somerville MA 02143
 website: alysonschultz.com
 pieces:
