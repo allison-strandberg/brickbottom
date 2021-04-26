@@ -13,11 +13,12 @@ module.exports = {
         buildingCenter: '59%',
       },
       gridTemplateRows: {
-        building: 'repeat(4, minmax(0, 16.8%))',
+        building: 'repeat(4, minmax(0, 16.8%)) 6% 13.5%',
         window: '1fr 25%',
       },
       gridTemplateColumns: {
         header: '18.5% 1fr 18.5%',
+        door: '54.4% 40%',
       },
       gap: {
         buildingX: '4%',
