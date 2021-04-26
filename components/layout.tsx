@@ -1,21 +1,72 @@
-import styles from './layout.module.scss'
-import Head from 'next/head'
+import { useState } from 'react'; 
+import { slide as BurgerMenu } from 'react-burger-menu'
+import Header from './header';
 import Footer from './footer';
+import MenuLink from './menuLink';
 
-export const siteTitle = 'Brickbottom Open Studios'
+interface LayoutProps {
+  fullName?: string,
+  home?: Boolean,
+  children?: React.ReactNode,
+}
 
-export default function Layout({ children, home }) {
+export default function Layout({ fullName, home, children }: LayoutProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleStateChange = (state) => {
+    setMenuOpen(state.isOpen);
+  };
+
+  const menuStyles = {
+    bmCrossButton: {
+      height: '24px',
+      width: '24px'
+    },
+    bmCross: {
+      background: '#2da5ce'
+    },
+    bmMenuWrap: {
+      position: 'fixed',
+      height: '100%'
+    },
+    bmMenu: {
+      background: '#373a47',
+      padding: '2.5em 1.5em 0',
+      fontSize: '1.15em'
+    },
+    bmMorphShape: {
+      fill: '#373a47'
+    },
+    bmItemList: {
+      color: '#b8b7ad',
+      padding: '0.8em'
+    },
+    bmItem: {
+      display: 'block'
+    },
+    bmOverlay: {
+      background: 'rgba(0, 0, 0, 0.3)'
+    },
+  };
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>{siteTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Visit the virtual Open Studios by Brickbottom artists"
-        />
-      </Head>
-      <main>{children}</main>
+    <div className='flex flex-col justify-between bg-gray-700'>
+      <div>
+        <Header fullName={fullName} home={home} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <BurgerMenu
+          right
+          styles={menuStyles}
+          itemListClassName={ "flex flex-col" }
+          isOpen={menuOpen}
+          onStateChange={(state) => handleStateChange(state)}
+          customBurgerIcon={false}
+        >
+          <MenuLink href="https://brickbottom.org/exhibition/recycle-remake-reimagine/" text="Brickbottom Gallery Show" />
+          <MenuLink href="https://www.youtube.com/channel/UC0D6JPA1WwWm9sss6TqoPuQ" text="Videos" />
+          <MenuLink href="https://brickbottom-artists-association.square.site/" text="Shop" />
+        </BurgerMenu>
+        <main className='bg-gray-700'>{children}</main>
+      </div>
       <Footer />
     </div>
   )
