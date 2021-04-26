@@ -1,7 +1,8 @@
-import { useState, useContext } from 'react'; 
+import { useState } from 'react'; 
 import { slide as BurgerMenu } from 'react-burger-menu'
 import Header from './header';
 import Footer from './footer';
+import MenuLink from './menuLink';
 
 interface LayoutProps {
   fullName?: string,
@@ -17,25 +18,12 @@ export default function Layout({ fullName, home, children }: LayoutProps) {
   };
 
   const menuStyles = {
-    bmBurgerButton: {
-      position: 'fixed',
-      width: '36px',
-      height: '30px',
-      left: '36px',
-      top: '36px'
-    },
-    bmBurgerBars: {
-      background: '#373a47'
-    },
-    bmBurgerBarsHover: {
-      background: '#a90000'
-    },
     bmCrossButton: {
       height: '24px',
       width: '24px'
     },
     bmCross: {
-      background: '#bdc3c7'
+      background: '#2da5ce'
     },
     bmMenuWrap: {
       position: 'fixed',
@@ -54,7 +42,7 @@ export default function Layout({ fullName, home, children }: LayoutProps) {
       padding: '0.8em'
     },
     bmItem: {
-      display: 'inline-block'
+      display: 'block'
     },
     bmOverlay: {
       background: 'rgba(0, 0, 0, 0.3)'
@@ -68,10 +56,14 @@ export default function Layout({ fullName, home, children }: LayoutProps) {
         <BurgerMenu
           right
           styles={menuStyles}
+          itemListClassName={ "flex flex-col" }
           isOpen={menuOpen}
           onStateChange={(state) => handleStateChange(state)}
+          customBurgerIcon={false}
         >
-          <a>test</a>
+          <MenuLink href="https://brickbottom.org/exhibition/recycle-remake-reimagine/" text="Brickbottom Gallery Show" />
+          <MenuLink href="https://www.youtube.com/channel/UC0D6JPA1WwWm9sss6TqoPuQ" text="Videos" />
+          <MenuLink href="https://brickbottom-artists-association.square.site/" text="Shop" />
         </BurgerMenu>
         <main className='bg-gray-700'>{children}</main>
       </div>
