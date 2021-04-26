@@ -77,7 +77,7 @@ export default function Artist ({
       <div className="mt-20 flex flex-wrap lg:flex-nowrap justify-around">
         <div className="flex flex-col items-center">
           <Gallery artist={artist} pieces={pieces} />
-          { (artist === 'alyson-schulz') && (
+          { (artist === 'alyson-schultz') && (
           <div
               className="statement m-2 py-8 text-white max-w-2xl"
               dangerouslySetInnerHTML={{ __html: statement }}
@@ -96,7 +96,7 @@ export default function Artist ({
               twitter={twitter}
               facebook={facebook}
             />
-            { (artist !== 'alyson-schulz') && (
+            { (artist !== 'alyson-schultz') && (
               <div
                 className="statement py-8 px-2"
                 dangerouslySetInnerHTML={{ __html: statement }}
