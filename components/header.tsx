@@ -1,12 +1,14 @@
 import Link from 'next/link';
-import Menu from './menu';
+import MenuButton from './menuButton';
 
 interface HeaderProps {
+  menuOpen: Boolean,
+  setMenuOpen: Function,
   fullName?: string,
   home?: Boolean,
 }
 
-export default function Header({ fullName, home }: HeaderProps) {
+export default function Header({ menuOpen, setMenuOpen, fullName, home }: HeaderProps) {
   return (
     <div className="fixed z-10 flex justify-center overflow-x-hidden bg-beige min-h-2rem">
       <img
@@ -28,7 +30,7 @@ export default function Header({ fullName, home }: HeaderProps) {
         <h1 className="col-start-2 flex items-center justify-center font-fredericka text-gray-700 text-center text-xl md:text-3xl">{
           fullName ? fullName : 'Brickbottom Open Studios'
         }</h1>
-        <Menu />
+        <MenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </header>
     </div>
   );

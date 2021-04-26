@@ -20,6 +20,7 @@
     "next": "10.0.9",
     "next-optimized-images": "^2.6.2",
     "react": "17.0.1",
+    "react-burger-menu": "^3.0.6",
     "react-dom": "17.0.1",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
