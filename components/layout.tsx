@@ -3,14 +3,16 @@ import { slide as BurgerMenu } from 'react-burger-menu'
 import Header from './header';
 import Footer from './footer';
 import MenuLink from './menuLink';
+import { ArtistProps } from '../pages/[artist]';
 
 interface LayoutProps {
   fullName?: string,
   home?: Boolean,
+  allArtistsData?: ArtistProps[],
   children?: React.ReactNode,
 }
 
-export default function Layout({ fullName, home, children }: LayoutProps) {
+export default function Layout({ fullName, home, allArtistsData, children }: LayoutProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleStateChange = (state) => {
@@ -61,7 +63,10 @@ export default function Layout({ fullName, home, children }: LayoutProps) {
           onStateChange={(state) => handleStateChange(state)}
           customBurgerIcon={false}
         >
-          { !home && <MenuLink href="/" text="Home" internal />}
+          <MenuLink href="/" text="Artists' Studio Galleries" internal />
+          {allArtistsData && allArtistsData.map(({ artist, name }) => (
+            <MenuLink href={`/${artist}`} text={name.full} key={artist} internal indent />
+          ))}
           <MenuLink href="https://brickbottom.org/exhibition/recycle-remake-reimagine/" text="Brickbottom Gallery Show" />
           <MenuLink href="https://www.youtube.com/channel/UC0D6JPA1WwWm9sss6TqoPuQ" text="Videos" />
           <MenuLink href="https://brickbottom-artists-association.square.site/" text="Shop" />

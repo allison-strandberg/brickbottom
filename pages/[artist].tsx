@@ -2,13 +2,15 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import Gallery from '../components/gallery';
 import Social from '../components/social';
-import { getAllArtists, getArtistData } from '../lib/artists';
+import { getAllArtists, getArtistData, getArtistsData } from '../lib/artists';
 
 export async function getStaticProps({ params }) {
+  const allArtistsData = await getArtistsData();
   const artistData = await getArtistData(params.artist)
   return {
     props: {
-      ...artistData
+      ...artistData,
+      allArtistsData,
     }
   }
 }
@@ -53,6 +55,7 @@ export interface ArtistProps {
   twitter?: string,
   facebook?: string,
   statement?: string,
+  allArtistsData?: ArtistProps[],
 }
 
 export default function Artist ({
@@ -68,9 +71,10 @@ export default function Artist ({
   twitter,
   facebook,
   statement,
+  allArtistsData,
 }: ArtistProps) {
   return (
-    <Layout fullName={name.full}>
+    <Layout fullName={name.full} allArtistsData={allArtistsData}>
       <Head>
         <title>{ name.full }</title>
       </Head>

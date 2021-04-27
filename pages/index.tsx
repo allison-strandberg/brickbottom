@@ -14,7 +14,7 @@ export async function getStaticProps() {
 
 export default function Home({ allArtistsData }) {
   return (
-    <Layout home>
+    <Layout home allArtistsData={allArtistsData}>
       <Head>
         <title>Brickbottom Open Studios</title>
         <link rel="icon" href="/favicon.ico" />
