@@ -61,6 +61,7 @@ export default function Layout({ fullName, home, children }: LayoutProps) {
           onStateChange={(state) => handleStateChange(state)}
           customBurgerIcon={false}
         >
+          { !home && <MenuLink href="/" text="Home" internal />}
           <MenuLink href="https://brickbottom.org/exhibition/recycle-remake-reimagine/" text="Brickbottom Gallery Show" />
           <MenuLink href="https://www.youtube.com/channel/UC0D6JPA1WwWm9sss6TqoPuQ" text="Videos" />
           <MenuLink href="https://brickbottom-artists-association.square.site/" text="Shop" />
