@@ -2,6 +2,7 @@
 name:
   first: Rosamond
   last: Purcell
+videoId: jHL753eS9tw 
 pieces:
   - filename: Tiger.jpg
     title: Photograph of Tiger in a Pool of Water

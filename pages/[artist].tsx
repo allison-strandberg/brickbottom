@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import Gallery from '../components/gallery';
 import Social from '../components/social';
+import Video from '../components/video';
 import { getAllArtists, getArtistData, getArtistsData } from '../lib/artists';
 
 export async function getStaticProps({ params }) {
@@ -55,6 +56,8 @@ export interface ArtistProps {
   twitter?: string,
   facebook?: string,
   statement?: string,
+  videoId?: string,
+  videoId2?: string,
   allArtistsData?: ArtistProps[],
 }
 
@@ -71,6 +74,8 @@ export default function Artist ({
   twitter,
   facebook,
   statement,
+  videoId,
+  videoId2,
   allArtistsData,
 }: ArtistProps) {
   return (
@@ -87,6 +92,8 @@ export default function Artist ({
               dangerouslySetInnerHTML={{ __html: statement }}
             />
           )}
+          { videoId && <Video id={videoId} /> }
+          { videoId2 && <Video id={videoId2} /> }
         </div>
         {(email || website || website2 || instagram || address || phone || twitter || facebook || statement ) && (
           <div className="text-white font-open-sans lg:w-1/4">

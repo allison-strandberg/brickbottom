@@ -5,6 +5,7 @@ name:
 website: debraolin.com
 email: debra@debraolin.com
 instagram: debraolin7
+videoId: 7jZJh1TpnOQ
 pieces:
   - filename: upMySpine.jpg
     title: Up My Spine
