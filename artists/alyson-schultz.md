@@ -4,6 +4,7 @@ name:
   last: Schultz
 address: 1 Fitchburg St. C209, Somerville MA 02143
 website: alysonschultz.com
+videoId: dkB4CB0HIoo
 pieces:
   - filename: ladder.jpg
     title: LADDER (diptych)

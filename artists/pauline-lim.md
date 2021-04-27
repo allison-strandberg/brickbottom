@@ -7,6 +7,8 @@ website2: pixels.com/profiles/pauline-lim/shop
 instagram: Lim_pauline
 twitter: PaulineLim7
 facebook: Pauline-Lim-Artwork-149750155097216
+videoId: R4R1kX4cQNE
+videoId2: CUkfV_wyEEQ
 pieces:
   - filename: MyEarlyLife2.jpg
     title: My Early Life 2
