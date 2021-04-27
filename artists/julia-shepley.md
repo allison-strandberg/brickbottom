@@ -4,6 +4,7 @@ name:
   last: Shepley
 website: www.juliashepley.com
 email: jrshepley@rcn.com
+videoId: JwLlRtNY4IY
 pieces:
   - filename: pianoShadow.jpg
     title: Piano Shadow
