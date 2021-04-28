@@ -83,7 +83,7 @@ export default function Artist ({
       <Head>
         <title>{ name.full }</title>
       </Head>
-      <div className="mt-20 flex flex-wrap lg:flex-nowrap justify-around">
+      <div className="mt-20 flex flex-wrap lg:flex-nowrap justify-around bg-gray-700 pb-20">
         <div className="flex flex-col items-center">
           <Gallery artist={artist} pieces={pieces} />
           { (artist === 'alyson-schultz') && (

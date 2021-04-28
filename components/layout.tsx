@@ -43,9 +43,6 @@ export default function Layout({ fullName, home, allArtistsData, children }: Lay
       color: '#b8b7ad',
       padding: '0.8em'
     },
-    bmItem: {
-      display: 'block'
-    },
     bmOverlay: {
       background: 'rgba(0, 0, 0, 0.3)'
     },
@@ -63,13 +60,41 @@ export default function Layout({ fullName, home, allArtistsData, children }: Lay
           onStateChange={(state) => handleStateChange(state)}
           customBurgerIcon={false}
         >
-          <MenuLink href="/" text="Artists' Studio Galleries" internal />
-          {allArtistsData && allArtistsData.map(({ artist, name }) => (
-            <MenuLink href={`/${artist}`} text={name.full} key={artist} internal indent />
-          ))}
-          <MenuLink href="https://brickbottom.org/exhibition/recycle-remake-reimagine/" text="Brickbottom Gallery Show" />
-          <MenuLink href="https://www.youtube.com/channel/UC0D6JPA1WwWm9sss6TqoPuQ" text="Videos" />
-          <MenuLink href="https://brickbottom-artists-association.square.site/" text="Shop" />
+          { (!home) && (
+            <MenuLink
+              href="/"
+              text="Home"
+              internal
+              className="font-bold"
+            />
+          )}
+          <MenuLink
+            href="https://brickbottom.org/exhibition/recycle-remake-reimagine/"
+            text="Brickbottom Gallery Show"
+            className="font-bold"
+          />
+          <MenuLink
+            href="https://www.youtube.com/channel/UC0D6JPA1WwWm9sss6TqoPuQ"
+            text="Videos"
+            className="font-bold"
+          />
+          <MenuLink
+            href="https://brickbottom-artists-association.square.site/"
+            text="Shop"
+            className="font-bold"
+          />
+          <div className="outline-none">
+            <div
+              className="py-2 font-josefin text-teal font-bold"
+            >
+              Artists’ Studio Galleries
+            </div>
+            <div className="flex flex-col justify-between outline-none">
+              {allArtistsData && allArtistsData.map(({ artist, name }) => (
+                <MenuLink href={`/${artist}`} text={name.full} key={artist} internal indent />
+              ))}
+            </div>
+          </div>
         </BurgerMenu>
         <main className='bg-gray-700'>{children}</main>
       </div>

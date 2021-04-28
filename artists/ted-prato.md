@@ -2,6 +2,10 @@
 name:
   first: Ted
   last: Prato
+email: tedprato@aol.com
+instagram: tedprato
+phone: 617-515-1363
+address: 'SOWA Artists, 450 Harrison Ave, Boston, MA, Studio #226'
 pieces:
   - filename: ColorChaos.jpg
     title: Color Chaos
