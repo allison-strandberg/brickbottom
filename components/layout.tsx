@@ -63,13 +63,13 @@ export default function Layout({ fullName, home, allArtistsData, children }: Lay
           onStateChange={(state) => handleStateChange(state)}
           customBurgerIcon={false}
         >
+          <MenuLink href="https://brickbottom.org/exhibition/recycle-remake-reimagine/" text="Brickbottom Gallery Show" />
+          <MenuLink href="https://www.youtube.com/channel/UC0D6JPA1WwWm9sss6TqoPuQ" text="Videos" />
+          <MenuLink href="https://brickbottom-artists-association.square.site/" text="Shop" />
           <MenuLink href="/" text="Artists' Studio Galleries" internal />
           {allArtistsData && allArtistsData.map(({ artist, name }) => (
             <MenuLink href={`/${artist}`} text={name.full} key={artist} internal indent />
           ))}
-          <MenuLink href="https://brickbottom.org/exhibition/recycle-remake-reimagine/" text="Brickbottom Gallery Show" />
-          <MenuLink href="https://www.youtube.com/channel/UC0D6JPA1WwWm9sss6TqoPuQ" text="Videos" />
-          <MenuLink href="https://brickbottom-artists-association.square.site/" text="Shop" />
         </BurgerMenu>
         <main className='bg-gray-700'>{children}</main>
       </div>
