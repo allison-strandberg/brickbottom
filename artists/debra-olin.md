@@ -5,7 +5,6 @@ name:
 website: debraolin.com
 email: debra@debraolin.com
 instagram: debraolin7
-phone: 617-957-0628
 videoId: 7jZJh1TpnOQ
 pieces:
   - filename: upMySpine.jpg
