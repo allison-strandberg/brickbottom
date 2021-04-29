@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       height: {
         buildingTop: '6%',
+        'ground-window': '65%'
       },
       width: {
         buildingCenter: '59%',
@@ -19,6 +20,7 @@ module.exports = {
       gridTemplateColumns: {
         header: '18.5% 1fr 18.5%',
         door: '54.4% 40%',
+        'ground-window': '3.5% 39% 12% 40% 1fr'
       },
       gap: {
         buildingX: '4%',
