@@ -10,7 +10,7 @@ interface HeaderProps {
 
 export default function Header({ menuOpen, setMenuOpen, fullName, home }: HeaderProps) {
   return (
-    <div className="fixed z-10 flex justify-center overflow-x-hidden bg-beige min-h-2rem">
+    <div className="fixed z-10 flex justify-center items-center overflow-x-hidden bg-beige min-h-2rem">
       <img
         className="opacity-0 lg:opacity-100"
         src={require('../public/images/header.webp')}

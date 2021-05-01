@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <footer className="flex justify-center w-full p-8 font-josefin bg-gray-700 border-t-32 border-teal">
+      <footer className="flex justify-center items-center w-full p-8 font-josefin bg-gray-700 border-t-32 border-teal">
         <div className="w-1/2 flex flex-wrap justify-around">
           <a
             className="flex items-center mx-2 my-1 text-base md:text-xl bg-gray-600 p-2 rounded-sm transition duration-300 hover:bg-gray-500"
