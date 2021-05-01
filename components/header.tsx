@@ -11,12 +11,16 @@ interface HeaderProps {
 export default function Header({ menuOpen, setMenuOpen, fullName, home }: HeaderProps) {
   return (
     <div className="fixed z-10 flex justify-center items-center overflow-x-hidden bg-beige min-h-2rem">
-      <img
-        className="opacity-0 lg:opacity-100"
-        src={require('../public/images/header.webp')}
-        alt=""
-        role="presentation"
-      />
+      <picture>
+        <source srcSet={require('../public/images/header.webp')} type="image/webp" />
+        <source srcSet={require('../public/images/header.jpg')} type="image/jpeg" />
+        <img
+          className="opacity-0 lg:opacity-100"
+          src={require('../public/images/header.jpg')}
+          alt=""
+          role="presentation"
+        />
+      </picture>
       <header className="flex justify-center lg:grid lg:grid-cols-header absolute top-0 h-full w-full backdrop-filter backdrop-blur lg:backdrop-brightness-150">
         { !home && (
           <div className="flex justify-center absolute top-0 left-0 lg:relative">
