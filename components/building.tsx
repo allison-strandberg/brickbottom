@@ -8,7 +8,7 @@ interface BuildingProps {
 
 export default function Building({ allArtistsData }: BuildingProps) {
   return (
-    <div className="relative w-full overflow-x-hidden flex justify-center">
+    <div className="relative w-full overflow-x-hidden flex justify-center items-center">
       <div className="absolute w-full h-full flex flex-col justify-center items-center">
         <div className="h-buildingTop"/>
         <div className="absolute h-full w-30"></div>
