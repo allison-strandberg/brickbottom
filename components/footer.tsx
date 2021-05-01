@@ -10,6 +10,13 @@ export default function Footer() {
           >
             brickbottom.org
           </a>
+          <a
+            className="flex items-center mx-2 text-base md:text-xl bg-gray-600 p-2 rounded-sm transition duration-300 hover:bg-gray-500"
+            href="https://www.somervilleopenstudios.org/"
+            target="_blank"
+          >
+            somervilleopenstudios.org
+          </a>
           <form action="https://www.paypal.com/donate" method="post" target="_top" className="mx-2 bg-gray-600 rounded-sm transition duration-300 hover:bg-gray-500">
             <input type="hidden" name="hosted_button_id" value="4ZE5WWVVMRQHQ" />
             <input
