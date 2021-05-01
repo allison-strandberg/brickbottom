@@ -37,10 +37,15 @@ export default function Building({ allArtistsData }: BuildingProps) {
           </div>
         </div>
       </div>
-      <img
-        className="min-w-lg opacity-20 lg:opacity-100 pointer-events-none"
-        src={require('../public/images/building.webp')}
-      />
+      <picture>
+        <source srcSet={require('../public/images/building.webp')} type="image/webp" />
+        <source srcSet={require('../public/images/building.jpg')} type="image/jpeg" />
+        <img
+          className="min-w-lg opacity-20 lg:opacity-100 pointer-events-none"
+          src={require('../public/images/building.jpg')}
+          alt="A photo of the Brickbottom building"
+        />
+      </picture>
     </div>
   );
 }
