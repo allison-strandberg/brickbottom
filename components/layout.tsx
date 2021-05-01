@@ -85,7 +85,7 @@ export default function Layout({ fullName, home, allArtistsData, children }: Lay
           />
           <div className="outline-none">
             <div
-              className="py-2 font-josefin text-teal font-bold"
+              className="py-2 font-josefin-sans text-teal font-bold"
             >
               Artists’ Studio Galleries
             </div>

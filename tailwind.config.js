@@ -59,6 +59,7 @@ module.exports = {
       fredericka: ['"Fredericka the Great"', 'serif'],
       'open-sans': ['open-sans', 'sans-serif'],
       josefin: ['"Josefin Slab"', 'serif'],
+      'josefin-sans': ['"Josefin Sans"', 'serif'],
     },
     screens: {
       sm: '640px',

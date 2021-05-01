@@ -11,7 +11,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans&family=Josefin+Slab&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans&family=Josefin+Sans:wght@400;700&family=Josefin+Slab:wght@400;700&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />
